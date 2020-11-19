@@ -2,9 +2,14 @@
 #######
 *.gitignore
 
+# Text files #
+*.txt
+
+
 # Image files #
 ###############
 *.jpeg
+*.jpg
 
 # Data files #
 ##############
