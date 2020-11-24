@@ -36,13 +36,16 @@ To retrieve our non-fire instances, a function was written to randomly generate 
 
 Once these two Datasets 
 
-![recorded fire instances](https://github.com/ptanner925/wildfire_capstone/reports/visualizations/composite_fire_map.jpg)
+![recorded fire instances](https://github.com/ptanner925/wildfire_capstone/reports/visualizations/composite_fire_map_2015_to_2019.png)
 
 ## Data Preparation
+
+After retrieving the images from the google api the images were classified into fire and non-fire classes, meaning that the image had been identified as an area having experienced a recorded fire anomaly event and those that have not. Because we are running a CNN, a supervised learning machine method, labels need to be attributed to images to help reduce loss, and increase recall and accuracy. After this was done, each image was converted into a 1-D array, and divided by 255. The values of the RGB pixels range from 0-255. Dividing each pixel by 255 normalizes our color values to between 0-1, and helps our CNN algorithm converge faster.
 
 
 
 ## Modeling
+
 
 ## Evaluation
 
