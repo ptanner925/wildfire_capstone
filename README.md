@@ -30,9 +30,17 @@ This project really could have trained over any area known to have a high amount
 
 Our data understanding is broken down into two parts. Retrieving known instances of fire anomaly events in Northern California, and then using these known instances to query the Google Static API for relevant satellite imagery data corresponding to the location that a fire isntance was recorded.
 
-To retrieve fire anomaly events we referenced the [NASA FIRMs archive data](https://firms.modaps.eosdis.nasa.gov/country/). This archive contains all recorded instances of fire anomalies over the planet earth, using the MODIS instrument system. The Moderate Resolution Imaging Spectroradiometer (MODIS) is a key instrument onboard the Earth Observing System (EOS) Terra and Aqua platforms, designed to monitor the Earth's atmosphere, ocean, and land surface with a set of visible, NIR, MIR, and thermal channels.
+To retrieve fire anomaly events we referenced the [NASA FIRMs archive data](https://firms.modaps.eosdis.nasa.gov/country/). This archive contains all recorded instances of fire anomalies over the planet earth, using the MODIS instrument system. The Moderate Resolution Imaging Spectroradiometer (MODIS) is a key instrument onboard the Earth Observing System (EOS) Terra and Aqua platforms, designed to monitor the Earth's atmosphere, ocean, and land surface with a set of visible, NIR, MIR, and thermal channels. After selecting for the years between 2015 and 2019, for fire anomalies in the United States. The resulting datasets were then combined and cleaned to select for fire instances between latitudes of (38.0881 & 40.8336) and longitudes between (-123.1208 & -120.2933), comprising an area of northern California of approximately 70,000 km^2. Each fire instance comes with a confidence rating that determines the system's confidence that it has succesfully detected a fire instance. For our purposes we selected those fire instances within the given square area with a confidence level greater than or equal to 75%. This left us with a total of 10,896 fire instances.
+
+To retrieve our non-fire instances, a function was written to randomly generate coordinates over the same square area. Wildfires are overwhelming small. So our chances of retrieving an image over an area with the same relative area, are relatively low. however the risk of this occuring is not zero, and duplicates were removed, also images captured over the ocean, or in the San Fransisco Bay Area were also removed.
+
+Once these two Datasets 
+
+![recorded fire instances](https://github.com/ptanner925/wildfire_capstone/reports/visualizations/composite_fire_map.jpg)
 
 ## Data Preparation
+
+
 
 ## Modeling
 
