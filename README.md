@@ -26,6 +26,8 @@ According to a [United States Congressional Report](https://fas.org/sgp/crs/misc
 
 This project really could have trained over any area known to have a high amount of wildfires to train it's model. However Northern California was chosen due to the authors XYZ
 
+![recorded fire instances](https://github.com/ptanner925/wildfire_capstone/reports/visualizations/composite_fire_map_2015_to_2019.png)
+
 ## Data Understanding
 
 Our data understanding is broken down into two parts. Retrieving known instances of fire anomaly events in Northern California, and then using these known instances to query the Google Static API for relevant satellite imagery data corresponding to the location that a fire isntance was recorded.
@@ -34,9 +36,12 @@ To retrieve fire anomaly events we referenced the [NASA FIRMs archive data](http
 
 To retrieve our non-fire instances, a function was written to randomly generate coordinates over the same square area. Wildfires are overwhelming small. So our chances of retrieving an image over an area with the same relative area, are relatively low. however the risk of this occuring is not zero, and duplicates were removed, also images captured over the ocean, or in the San Fransisco Bay Area were also removed.
 
-Once these two Datasets 
+### Satellite Image Examples: 
 
-![recorded fire instances](https://github.com/ptanner925/wildfire_capstone/reports/visualizations/composite_fire_map_2015_to_2019.png)
+![fire class](https://github.com/ptanner925/wildfire_capstone/reports/visualizations/fire_class_example.png)
+![non fire class](https://github.com/ptanner925/wildfire_capstone/reports/visualizations/non_fire_class.png)
+
+
 
 ## Data Preparation
 
