@@ -13,7 +13,7 @@
 
 # Data files #
 ##############
-*.csv
+
 *.zip
 *.csv.gz
 *.gif
