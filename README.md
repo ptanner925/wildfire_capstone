@@ -26,7 +26,7 @@ According to a [United States Congressional Report](https://fas.org/sgp/crs/misc
 
 This project really could have trained over any area known to have a high amount of wildfires to train it's model. However Northern California was chosen because of the numerous wildfires that occur there every year, approximately 6500.
 
-![recorded fire instances](https://github.com/ptanner925/wildfire_capstone/reports/visualizations/composite_fire_map_2015_to_2019.png)
+![recorded fire instances](../reports/visualizations/composite_fire_map_2015_to_2019.png)
 
 ## Data Understanding
 
@@ -38,8 +38,8 @@ To retrieve our non-fire instances, a function was written to randomly generate 
 
 ### Satellite Image Examples: 
 
-![fire class](https://github.com/ptanner925/wildfire_capstone/reports/visualizations/fire_class_example.png)
-![non fire class](https://github.com/ptanner925/wildfire_capstone/reports/visualizations/non_fire_class.png)
+![fire class](../reports/visualizations/fire_class_example.png)
+![non fire class](../reports/visualizations/non_fire_class.png)
 
 
 
