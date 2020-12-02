@@ -26,7 +26,7 @@ According to a [United States Congressional Report](https://fas.org/sgp/crs/misc
 
 This project really could have trained over any area known to have a high amount of wildfires to train it's model. However Northern California was chosen because of the numerous wildfires that occur there every year, approximately 6500.
 
-![recorded fire instances](https://github.com/ptanner925/wildfire_capstone/blob/main/reports/visualizations/composite_fire_map_2015_to_2019.png)
+![recorded fire instances](../reports/visualizations/composite_fire_map_2015_to_2019_v2.png)
 
 ## Data Understanding
 
@@ -38,8 +38,8 @@ To retrieve our non-fire instances, a function was written to randomly generate 
 
 ### Satellite Image Examples: 
 
-![fire class](https://github.com/ptanner925/wildfire_capstone/blob/main/reports/visualizations/fire_class_example.png)
-![non fire class](https://github.com/ptanner925/wildfire_capstone/blob/main/reports/visualizations/non_fire_class.png)
+![fire class](../reports/visualizations/fire_class_example.png)
+![non fire class](../reports/visualizations/non_fire_class.png)
 
 
 
@@ -51,7 +51,7 @@ After retrieving the images from the google api the images were classified into 
 
 ## Modeling
 This project uses a Convolutional Neural Network to determine if a satellite image is of a wildfire area, and if it is not.
-![model training and test performance](https://github.com/ptanner925/wildfire_capstone/reports/visualizations/model_eval.png)
+![model training and test performance](../reports/visualizations/model_eval.png)
 
 ## Evaluation
 Overall, the model did kinda ok. It did just as well as tossing a coin. Which if you can believe it was an improvement. As I attempted to make the model more and more complex, the model started to classify most images as non-wild fire areas, most likely due to overfitting.  I have several theories about why the model performed the way it did. 
