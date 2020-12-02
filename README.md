@@ -6,6 +6,7 @@ My final project for the Flatiron Data Science Boot Camp attempts to use a Convo
 This home repository contains notebooks containing my exploratory data analysis, ways of retrieving satellite images, methods of model building, and conclusions as to the success of the overall project.
 
 ### Notebooks
+[Jupyter Notebooks](Notebooks)
 
 ### Reports
 [Visualizations](reports/visualizations)
