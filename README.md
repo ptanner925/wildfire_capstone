@@ -1,9 +1,9 @@
 # Wildfire_Capstone
-My final project for the Flatiron Data Science Boot Camp attempts to use a Convolutional Neural Network that scans satellite images from Northern California and is ultimately able to distinguish between areas that have experienced a wildfire event (or fire instance as it will be refered to often) and those areas that have not.
+My final project for the Flatiron Data Science Boot Camp attempts to use a Convolutional Neural Network that scans satellite images from Northern California and is ultimately able to distinguish between areas that have experienced a wildfire event and those areas that have not experienced a wildfire event.
 
 ## Table of Contents
 
-This home repository contains the project environment, notebooks containing our exploratory data analysis, methods of model building, and conclusions as to the success of the overall project.
+This home repository contains the project environment, notebooks containing my exploratory data analysis, methods of model building, and conclusions as to the success of the overall project.
 
 ### Notebooks
 
@@ -65,21 +65,36 @@ The model performed ok. The best model accuracy achieved was approximately 52%. 
 
 As I attempted to make the model more and more complex, the model started to classify most images as non-wild fire areas, most likely due to overfitting and overlapping features between the two types of areas. Eventually at some point 50% accuracy was the best intended target I could hope for. As you can see in the two graphs below, even in the best model performances the metrics of accuracy and validation loss remain relatively stagnant. Other more advanced models that ran for longer epochs and had more finely tuned hyperparameters saw a degredation in accuracy, and soaring rates of validation loss. Neither situation is ideal.
 
-![mvp_model](/reports/visualizations/model_eval.png) ![Complex model](/reports/visualizations/complex_model_eval.png)
+### MVP model metrics
+
+![mvp_model](/reports/visualizations/model_eval.png) 
+
+### More complex model metrics
+![Complex model](/reports/visualizations/complex_model_eval.png)
 
 I have several theories about why the model performed the way it did. The first is that there was not quite as varied a range of features for the model to pick up on as I had hoped. One image of a forest in Northern California, kinda looks like the other. For Example lets take another look at the Google Maps Satellite Images so we can discuss why it might be so difficult for our model to extract features in order to make a more accurate classification.
 
-![fire_class_2](/reports/visualizations/fire_class_2_v2.png) ![non_fire_2](/reports/visualizations/non_fire_class_2)
+![fire_class_2](/reports/visualizations/fire_class_2_v2.png) ![non_fire_2](/reports/visualizations/non_fire_class_2.png)
 
 First of all the Google Static Maps API, does not provide historical data of the day of a fire event, rather all images retrieved are the most recently taken image of the queried area, it's likely that the images you see here were taken on the same day. Furthermore, besides the subtle scorch marks we see in the image on our left, our fire class image, we ourselves can hardly detect a difference between the two. A convolutional network doesn't "know" the difference between scorched earth, and dirt, all it detects is a tensor value that to us would appear as the color brown.
 
 My original intention was to use the NASA Earth API to retrieve historical satellite images to retrieve photos of an area the day of the fire but this too was problematic. While you can request historic images, the nature of satellites is they can only be at one place at one time, so if the area and date of the request made for an image does not coincide with a satellite orbit, you get the next image taken closest to the date queried. Even so, if you do manage to get an image from the day of a fire, and get a good luck at conditions and features from that day, you run into similar problems as I did with the Google Static Maps API. To demonstrate this I have provided a NASA satellite below using the NASA Earth API.
 
+
+### NASA Example Image
 ![NASA Example](/reports/visualizations/nasa_image_example.png)
 
-Can you tell the difference between a snow capped mountain range, smoke, and a cloud? Because the image on the right contains all three. And most likely to a convolutional neural network, these amorphous random white blobs are mostly likely all the same. The problem here really lies in using raw satellite imaging data. There are better and more constructive methods.
+Can you tell the difference between a snow capped mountain range, smoke, and a cloud? Because this image contains all three. And most likely to a convolutional neural network, these amorphous random white blobs are most likely all the same. The problem here really lies in using raw satellite imaging data. There are better and more constructive methods.
 
 ## Next steps
-Moving forward I would like to replicate a model developed by a joint [Google & Stanford](https://arxiv.org/pdf/2010.07445v1.pdf) study that took aggregated satellite photos from a wildfire area leading up to and including the day of fire ignition, that measure different features of an environment, such as elevation, drought, vegetation index, and temperature, and combined them into a single tensor. They then fed this object into a type of Convolutional Neural Network called a U-NET, and used this to predict how large a wildfire event would be in terms of area burned. Building models such as this may be more helpful to state and federal authorities in regards to planning for a fire season, and determining which fires to let burn, and which ones they should target. It should be said that wildfires, while mostly are a man-made, are also apart of the natural process. Finding the right balance may be key to combating the long term health of the United States forests, and it's economies.
+Moving forward I would like to replicate a model developed by a joint [Google & Stanford](https://arxiv.org/pdf/2010.07445v1.pdf) study that took aggregated satellite photos from a wildfire area leading up to and including the day of fire ignition, that measure different features of an environment, such as elevation, drought, vegetation index, and temperature, and combined them into a single tensor. 
+
+![Google/Standford study](/reports/visualizations/google_study_1.png)
+
+They then fed this object into a type of Convolutional Neural Network called a U-NET, and used this to predict how large a wildfire event would be in terms of area burned.
+
+![Google/Standford study 2](/reports/visualizations/google_study_2.png)
+
+Building models such as this may be more helpful to state and federal authorities in regards to planning for a fire season, and determining which fires to let burn, and which ones they should target. It should be said that wildfires, while mostly are a man-made, are also apart of the natural process. Finding the right balance may be key to combating the long term health of the United States forests, and it's economies.
 
 Thank you for joining me. I look forward to tackling this problem again with my hard won insights and welcome any feedback or collabarative interests you may have in this subject as well.
