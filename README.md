@@ -8,13 +8,17 @@ This home repository contains notebooks containing my exploratory data analysis,
 ### Notebooks
 [Jupyter Notebooks](Notebooks)
 
+[Fire Instance Collection and API Query](https://github.com/ptanner925/wildfire_capstone/blob/main/Notebooks/data_gathering_and_nasa_test.ipynb)
+
+[Model Building](https://github.com/ptanner925/wildfire_capstone/blob/main/Notebooks/Final_Notebook.ipynb)
+
 ### Reports
 [Visualizations](reports/visualizations)
 
-### Data
-[How to access data](https://github.com/ptanner925/wildfire_capstone/blob/main/Notebooks/satelitte_data_retrieval.ipynb)
+### Data Collection
+[Fire Instance Collection and API Query](https://github.com/ptanner925/wildfire_capstone/blob/main/Notebooks/data_gathering_and_nasa_test.ipynb)
 
-### Modeling
+### Final Notebook
 [Model Building](https://github.com/ptanner925/wildfire_capstone/blob/main/Notebooks/Final_Notebook.ipynb)
 
 ### Readme
@@ -44,7 +48,7 @@ To retrieve our non-fire instances, a function was written to randomly generate 
 ![fire class](/reports/visualizations/fire_class_example.png)
 ![non fire class](/reports/visualizations/non_fire_class.png)
 
-
+source: Google Earth API
 
 ## Data Preparation
 
@@ -85,7 +89,7 @@ My original intention was to use the NASA Earth API to retrieve historical satel
 
 ### NASA Example Image
 ![NASA Example](/reports/visualizations/nasa_image_example.png)
-
+source: NASA Earth API
 Can you tell the difference between a snow capped mountain range, smoke, and a cloud? Because this image contains all three. And most likely to a convolutional neural network, these amorphous random white blobs are most likely all the same. The problem here really lies in using raw satellite imaging data. There are better and more constructive methods.
 
 ## Next steps
@@ -100,3 +104,15 @@ They then fed this object into a type of Convolutional Neural Network called a U
 Building models such as this may be more helpful to state and federal authorities in regards to planning for a fire season. They allow you to determine which fires to let burn and which ones they should target. It should be said that wildfires, while mostly man-made, are also apart of the natural process and typically only 1% turn into the large scale events we see on the news. Finding the right balance may be key to combating the long term health of the United States' forests and preventing the large scale fire events that we see today.
 
 Thank you for joining me. I look forward to tackling this problem again with my hard won insights and welcome any feedback or collabarative interests you may have on this subject.
+
+## References
+
+1. [NASA FIRMs archive data](https://firms.modaps.eosdis.nasa.gov/country/)
+
+2. Huot, F., Hu, R. L., Ihme, M., Wang, Q., Burge, J. B., Lu, T. L., Hickey, J., Chen, Y. F., & Anderson, J. (2020, October 15). Deep Learning Models for Predicting Wildfires from Historical Remote-Sensing Data. Arxiv.Org. [Article](https://arxiv.org/abs/2010.07445)
+
+3. [Google Maps API](https://www.google.com/maps)
+
+4. [NASA Earth API](https://api.nasa.gov/)
+
+5. [2020 Wildfire Congressional Report](https://fas.org/sgp/crs/misc/IF10244.pdf)
