@@ -11,10 +11,10 @@ This home repository contains notebooks containing my exploratory data analysis,
 [Visualizations](reports/visualizations)
 
 ### Data
-[How to access data](satelitte_data_retrieval.ipynb)
+[How to access data](https://github.com/ptanner925/wildfire_capstone/blob/main/Notebooks/satelitte_data_retrieval.ipynb)
 
 ### Modeling
-[Model Building](Final_Notebook.ipynb)
+[Model Building](https://github.com/ptanner925/wildfire_capstone/blob/main/Notebooks/Final_Notebook.ipynb)
 
 ### Readme
 
